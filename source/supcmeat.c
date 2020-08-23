@@ -120,7 +120,7 @@
 
 TREE *lastT;			/* last filenames in collection */
 jmp_buf sjbuf;			/* jump location for network errors */
-int dontjump;			/* flag to void sjbuf */
+extern int dontjump;			/* flag to void sjbuf */
 int cancompress = FALSE;	/* Can we do compression? */
 int docompress = FALSE;		/* Do we do compression? */
 

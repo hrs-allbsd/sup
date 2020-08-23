@@ -335,7 +335,7 @@ int progpid = -1;		/* and process id */
 
 COLLECTION *firstC, *thisC;	/* collection list pointer */
 
-extern int dontjump;		/* disable longjmp */
+int dontjump;			/* disable longjmp */
 extern int scmdebug;		/* SCM debugging flag */
 
 int silent;			/* Silent run, print only errors */

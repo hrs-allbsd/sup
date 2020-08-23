@@ -189,17 +189,17 @@ extern int netfile;		/* network file descriptor */
 
 int scmdebug;			/* scm debug flag */
 
-int cryptflag;			/* whether to encrypt/decrypt data */
-char *cryptbuf;			/* buffer for data encryption/decryption */
+extern int cryptflag;			/* whether to encrypt/decrypt data */
+extern char *cryptbuf;			/* buffer for data encryption/decryption */
 
 extern char *goawayreason;	/* reason for goaway message */
 
-struct buf {
+static struct buf {
 	char b_data[FILEXFER];	/* buffered data */
 	char *b_ptr;		/* pointer to end of buffer */
 	int b_cnt;		/* number of bytes in buffer */
-}   buffers[2];
-struct buf *bufptr;		/* buffer pointer */
+} buffers[2];
+static struct buf *bufptr;	/* buffer pointer */
 
 static int writedata(int, char *);
 static int writeblock(int, char *);
