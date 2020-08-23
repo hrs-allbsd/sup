@@ -2,10 +2,14 @@
 
 NOLINT= # defined
 NOPIC=  # defined
-NOPROFILE=# defined
 NO_LINT= # defined
 NO_PIC=  # defined
+.if defined(.FreeBSD)
+MK_PROFILE=no
+.else
+NOPROFILE=# defined
 NO_PROFILE=# defined
+.endif
 
 LIB=	sup
 
